@@ -1,3 +1,4 @@
+import { siteConfig } from "../lib/siteConfig";
 import DNANav from "./DNANav";
 import Starfield from "./Starfield";
 
@@ -13,15 +14,15 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center">
 
         <p className="mb-4 text-sm uppercase tracking-[0.4em] text-blue-300">
-          Portfolio of Shawn Radovic
+          Portfolio of {siteConfig.name}
         </p>
 
         <h1 className="max-w-4xl text-center text-4xl font-bold md:text-6xl">
-          From molecular biology to computational systems.
+          {siteConfig.title}
         </h1>
 
         <p className="mt-6 max-w-2xl text-center text-lg text-gray-300">
-          Building tools at the intersection of biology, data science, and software.
+          {siteConfig.description}
         </p>
 
         <DNANav />

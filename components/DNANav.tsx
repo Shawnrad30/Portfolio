@@ -1,14 +1,9 @@
-const navItems = [
-  { base: "A", label: "About Me", href: "#about" },
-  { base: "T", label: "Tech Stack", href: "#tech" },
-  { base: "C", label: "Core Projects", href: "#projects" },
-  { base: "G", label: "Goals", href: "#goals" },
-];
+import { siteConfig } from "../lib/siteConfig";
 
 export default function DNANav() {
   return (
     <nav className="mt-10 grid grid-cols-2 gap-4 md:flex md:gap-6">
-      {navItems.map((item) => (
+      {siteConfig.navItems.map((item) => (
         <a
           key={item.base}
           href={item.href}
