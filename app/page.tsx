@@ -1,25 +1,56 @@
-import Hero from "@/components/Hero";
+import Hero from "../components/Hero";
+import Section from "../components/Section";
 
 export default function Home() {
   return (
     <>
       <Hero />
 
-      <section id="about" className="min-h-screen bg-zinc-950 px-6 py-24 text-white">
-        <h2 className="text-4xl font-bold">About Me</h2>
-      </section>
+      <Section id="about" title="About Me" subtitle="Adenine" darker>
+        <p className="max-w-3xl text-lg leading-8 text-gray-300">
+          I’m a molecular biologist and data scientist building toward a career
+          at the intersection of biology, software, and computational systems.
+        </p>
+      </Section>
 
-      <section id="tech" className="min-h-screen bg-black px-6 py-24 text-white">
-        <h2 className="text-4xl font-bold">Technology Stack</h2>
-      </section>
+      <Section id="tech" title="Technology Stack" subtitle="Thymine">
+        <div className="grid gap-4 md:grid-cols-3">
+          {["Python", "SQL", "React", "Next.js", "Git", "Tableau"].map((tech) => (
+            <div
+              key={tech}
+              className="rounded-xl border border-blue-400/20 bg-white/5 p-5"
+            >
+              {tech}
+            </div>
+          ))}
+        </div>
+      </Section>
 
-      <section id="projects" className="min-h-screen bg-zinc-950 px-6 py-24 text-white">
-        <h2 className="text-4xl font-bold">Core Projects</h2>
-      </section>
+      <Section id="projects" title="Core Projects" subtitle="Cytosine" darker>
+        <div className="grid gap-6 md:grid-cols-3">
+          {["ICU Mortality Model", "Netflix SQL Dashboard", "TCR Gene Block Pipeline"].map(
+            (project) => (
+              <div
+                key={project}
+                className="rounded-xl border border-blue-400/20 bg-white/5 p-6"
+              >
+                <h3 className="text-xl font-bold">{project}</h3>
+                <p className="mt-3 text-gray-400">
+                  Project summary coming soon.
+                </p>
+              </div>
+            ),
+          )}
+        </div>
+      </Section>
 
-      <section id="genome" className="min-h-screen bg-black px-6 py-24 text-white">
-        <h2 className="text-4xl font-bold">Genome</h2>
-      </section>
+      <Section id="goals" title="Goals" subtitle="Guanine">
+        <p className="max-w-3xl text-lg leading-8 text-gray-300">
+          This section will describe where I’m going next: AI for biology,
+          protein modeling, drug discovery, and building tools that make biology
+          more scalable and reliable.
+        </p>
+      </Section>
     </>
   );
 }
