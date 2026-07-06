@@ -1,3 +1,4 @@
+import { projects } from "../lib/projects";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
 
@@ -28,16 +29,28 @@ export default function Home() {
 
       <Section id="projects" title="Core Projects" subtitle="Cytosine" darker>
         <div className="grid gap-6 md:grid-cols-3">
-          {["ICU Mortality Model", "Netflix SQL Dashboard", "TCR Gene Block Pipeline"].map(
+          {projects.map(
             (project) => (
               <div
-                key={project}
+                key={project.title}
                 className="rounded-xl border border-blue-400/20 bg-white/5 p-6"
               >
-                <h3 className="text-xl font-bold">{project}</h3>
+                <h3 className="text-xl font-bold">{project.title}</h3>
+
                 <p className="mt-3 text-gray-400">
-                  Project summary coming soon.
+                  {project.description}
                 </p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-blue-400/20 px-3 py-1 text-sm text-blue-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>  
               </div>
             ),
           )}
