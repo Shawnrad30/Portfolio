@@ -7,7 +7,8 @@ export default function Hero() {
 
       {/* Animated Background */}
       <Starfield />
-
+      {/* Blue Nebula Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.22),transparent_38%)]" />
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center">
 
