@@ -1,6 +1,7 @@
 import { siteConfig } from "../lib/siteConfig";
 import DNANav from "./DNANav";
 import Starfield from "./Starfield";
+import TypingText from "./TypingText";
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
         </p>
 
         <h1 className="max-w-4xl text-center text-4xl font-bold md:text-6xl">
-          {siteConfig.title}
+          <TypingText text={siteConfig.title} />
         </h1>
 
         <p className="mt-6 max-w-2xl text-center text-lg text-gray-300">
