@@ -27,6 +27,12 @@ export default function Hero() {
         </p>
 
         <DNANav />
+        <a
+          href="#about"
+          className="mt-14 text-sm text-gray-400 transition hover:text-blue-200"
+        >
+          Scroll to explore ↓
+        </a>
 
       </div>
     </section>
