@@ -1,6 +1,5 @@
 import Section from "../Section";
-
-const techStack = ["Python", "SQL", "React", "Next.js", "Git", "Tableau"];
+import { techStack } from "../../lib/techStack";
 
 export default function TechSection() {
   return (
