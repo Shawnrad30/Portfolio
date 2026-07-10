@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 type SectionProps = {
   id: string;
   title: string;
@@ -21,12 +23,15 @@ export default function Section({
       }`}
     >
       <div className="mx-auto max-w-6xl">
-        <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-300">
-          {subtitle}
-        </p>
-        <h2 className="text-4xl font-bold md:text-5xl">{title}</h2>
+        <Reveal>
+          <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-300">
+            {subtitle}
+          </p>
 
-        <div className="mt-10">{children}</div>
+          <h2 className="text-4xl font-bold md:text-5xl">{title}</h2>
+
+          <div className="mt-10">{children}</div>
+        </Reveal>
       </div>
     </section>
   );
