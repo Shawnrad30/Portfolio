@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center">
 
-        <p className="mb-4 text-sm uppercase tracking-[0.4em] text-blue-300">
+        <p className="mb-4 animate-fade-up animation-delay-200 text-sm uppercase tracking-[0.4em] text-blue-300">
           Portfolio of {siteConfig.name}
         </p>
 
@@ -22,18 +22,19 @@ export default function Hero() {
           <TypingText text={siteConfig.title} />
         </h1>
 
-        <p className="mt-6 max-w-2xl text-center text-lg text-gray-300">
+        <p className="mt-6 max-w-2xl animate-fade-up animation-delay-500 text-center text-lg text-gray-300">
           {siteConfig.description}
         </p>
 
-        <DNANav />
+        <div className="animate-fade-up animation-delay-900">
+          <DNANav />
+        </div>
         <a
           href="#about"
-          className="mt-14 text-sm text-gray-400 transition hover:text-blue-200"
+          className="mt-14 animate-fade-up animation-delay-1200 text-sm text-gray-400 transition hover:text-blue-200"
         >
           Scroll to explore ↓
         </a>
-
       </div>
     </section>
   );
