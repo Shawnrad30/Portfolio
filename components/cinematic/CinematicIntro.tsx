@@ -41,14 +41,14 @@ export default function CinematicIntro({
     >
       <Canvas
         camera={{
-          position: [0, 0, 5],
-          fov: 50,
+          position: [0, 0, 6],
+          fov: 45,
         }}
       >
         <SpaceScene />
       </Canvas>
 
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
+      <div className="pointer-events-none absolute inset-0 flex items-start justify-center px-6 pt-24 sm:pt-28">
         <div className="text-center">
           <p className="text-sm uppercase tracking-[0.45em] text-blue-200/70">
             A journey through scale

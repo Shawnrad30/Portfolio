@@ -1,13 +1,29 @@
 "use client";
 
 import { Stars } from "@react-three/drei";
+import Earth from "./Earth";
 
 export default function SpaceScene() {
   return (
     <>
       <color attach="background" args={["#000000"]} />
 
-      <ambientLight intensity={0.15} />
+      {/* Soft base lighting */}
+      <ambientLight intensity={0.08} />
+
+      {/* Main cinematic light */}
+      <directionalLight
+        position={[4, 2, 5]}
+        intensity={2.4}
+        color="#dbeafe"
+      />
+
+      {/* Cool rim light */}
+      <pointLight
+        position={[-4, 1, -2]}
+        intensity={1.5}
+        color="#2563eb"
+      />
 
       <Stars
         radius={100}
@@ -18,6 +34,8 @@ export default function SpaceScene() {
         fade
         speed={0.25}
       />
+
+      <Earth />
     </>
   );
 }
