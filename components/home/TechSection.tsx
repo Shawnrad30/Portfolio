@@ -1,17 +1,13 @@
+import TechCard from "../TechCard";
 import Section from "../Section";
 import { techStack } from "../../lib/techStack";
 
 export default function TechSection() {
   return (
     <Section id="tech" title="Technology Stack" subtitle="Thymine">
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {techStack.map((tech) => (
-          <div
-            key={tech}
-            className="rounded-xl border border-blue-400/20 bg-white/5 p-5"
-          >
-            {tech}
-          </div>
+          <TechCard key={tech} name={tech} />
         ))}
       </div>
     </Section>
