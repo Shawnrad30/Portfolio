@@ -13,9 +13,9 @@ export default function SpaceScene() {
 
       {/* Main cinematic light */}
       <directionalLight
-        position={[4, 2, 5]}
-        intensity={2.4}
-        color="#dbeafe"
+        position={[5, 2, 5]}
+        intensity={2.8}
+        color="#fff7ed"
       />
 
       {/* Cool rim light */}
