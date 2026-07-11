@@ -1,13 +1,28 @@
+import GoalCard from "../GoalCard";
+import { goals } from "../../lib/goals";
 import Section from "../Section";
 
 export default function GoalsSection() {
   return (
     <Section id="goals" title="Goals" subtitle="Guanine">
-      <p className="max-w-3xl text-lg leading-8 text-gray-300">
-        This section will describe where I’m going next: AI for biology, protein
-        modeling, drug discovery, and building tools that make biology more
-        scalable and reliable.
-      </p>
+      <div className="max-w-3xl">
+        <p className="text-lg leading-8 text-gray-300">
+          I want to work where biology, computation, and engineering
+          converge—building systems that help turn scientific understanding
+          into real-world impact.
+        </p>
+      </div>
+
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {goals.map((goal, index) => (
+          <GoalCard
+            key={goal.title}
+            title={goal.title}
+            description={goal.description}
+            number={index + 1}
+          />
+        ))}
+      </div>
     </Section>
   );
 }
