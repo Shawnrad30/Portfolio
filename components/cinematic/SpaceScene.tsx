@@ -6,11 +6,13 @@ import Earth from "./Earth";
 
 type SpaceSceneProps = {
   journeyStarted: boolean;
+  earthReached: boolean;
   onApproachComplete: () => void;
 };
 
 export default function SpaceScene({
   journeyStarted,
+  earthReached,
   onApproachComplete,
 }: SpaceSceneProps) {
   return (
@@ -41,7 +43,7 @@ export default function SpaceScene({
         speed={0.25}
       />
 
-      <Earth />
+      <Earth showPittsburgh={earthReached} />
 
       <CameraRig
         journeyStarted={journeyStarted}

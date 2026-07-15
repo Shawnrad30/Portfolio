@@ -53,6 +53,7 @@ export default function CinematicIntro({
       >
         <SpaceScene
           journeyStarted={journeyStarted}
+          earthReached={earthReached}
           onApproachComplete={() => setEarthReached(true)}
         />
       </Canvas>
